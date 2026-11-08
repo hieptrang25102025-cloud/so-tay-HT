@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5C8" />
+      <stop offset="45%" stop-color="#DFBE82" />
+      <stop offset="70%" stop-color="#C5A66A" />
+      <stop offset="100%" stop-color="#9E7D42" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- House Roof and Outline -->
+  <path d="M50 14L16 42V82C16 84.2 17.8 86 20 86H80C82.2 86 84 84.2 84 82V42L50 14Z" stroke="url(#goldGrad)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Inner Wrench -->
+  <path d="M42 68L56 54C57.5 52.5 59 52 61 52.5L66 49C65.5 45.5 66.8 41.8 69.8 38.8C73.4 35.2 78.5 34.2 82 36L74 44L77 47L85 39C86.8 42.5 85.8 47.6 82.2 51.2C79.2 54.2 75.5 55.5 72 55L68.5 60C69 62 68.5 63.5 67 65L53 79C51.5 80.5 49 80.5 47.5 79L42 73.5C40.5 72 40.5 69.5 42 68Z" fill="url(#goldGrad)" filter="url(#goldGlow)"/>
+</svg>

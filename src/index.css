@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  body {
+    background-color: #0d1422;
+    color: #F7F5F0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    overscroll-behavior-y: none;
+  }
+
+  input, textarea {
+    user-select: auto;
+    -webkit-user-select: auto;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E415E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A66A;
+}
+
+/* Gold Gradient Classes */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F3E5C8 0%, #DFBE82 25%, #C5A66A 70%, #9E7D42 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(135deg, rgba(223, 190, 130, 0.15) 0%, rgba(197, 166, 106, 0.05) 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5E7CB 0%, #DFBE82 40%, #C5A66A 80%, #9E7D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-glow {
+  border-color: rgba(197, 166, 106, 0.35);
+  box-shadow: 0 0 15px rgba(197, 166, 106, 0.18);
+}
+
+.shadow-gold-button {
+  box-shadow: 0 8px 25px -4px rgba(197, 166, 106, 0.45), 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Waveform Animation */
+@keyframes wavePulse {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-waveform {
+  animation: wavePulse 1.2s ease-in-out infinite;
+}
+
+/* Luxury Card Glow */
+.luxury-card {
+  background: #172235;
+  border: 1px solid #22334A;
+  box-shadow: 0 10px 30px -5px rgba(10, 15, 26, 0.7);
+}
+
+.luxury-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-card-hover:active {
+  transform: scale(0.98);
+}
